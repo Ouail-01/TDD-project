@@ -15,7 +15,7 @@ describe Solver do
     end
 
     it 'should raise error if the given number is negative' do
-      expect{@solver.factorial(-1)}.to raise_error('Negative number entered')
+      expect { @solver.factorial(-1) }.to raise_error('Negative number entered')
     end
   end
 
@@ -32,3 +32,4 @@ describe Solver do
       expect(@solver.reverse('12_34-56')).to eq('65-43_21')
     end
   end
+end
