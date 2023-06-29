@@ -32,4 +32,22 @@ describe Solver do
       expect(@solver.reverse('12_34-56')).to eq('65-43_21')
     end
   end
+
+  context 'testing fizzbuzz method' do
+    it 'should return "fizz" if the parameter is divisible by 3' do
+      expect(@solver.fizzbuzz(6)).to eq('fizz')
+    end
+
+    it 'should return "buzz" if the parameter is divisible by 5' do
+      expect(@solver.fizzbuzz(10)).to eq('buzz')
+    end
+
+    it 'should return "fizzbuzz" if the parameter is divisible by 3 and 5' do
+      expect(@solver.fizzbuzz(15)).to eq('fizzbuzz')
+    end
+
+    it 'should return the number if the parameter is not divisible by 3 or 5' do
+      expect(@solver.fizzbuzz(4)).to eq('4')
+    end
+  end
 end
